@@ -1,0 +1,126 @@
+  %@：%@\n|  %@: %@\n|  %@：%@\n|  %@: %@\n|  %@ : %@\n|  %@: %@\n|  %@: %@\n|  %@: %@\n|  %@: %@\n|  %@: %@\n
+ 字节| bytes| バイト| 바이트| octets| Byte| bytes| bytes| byte| байт
+%@ %@ 个项目到：|%@ %@ items to:|%@ %@ 項目の移動先／コピー先:|%@ %@개 항목 대상:|%@ %@ éléments vers :|%@ %@ Objekte nach:|%@ %@ elementos a:|%@ %@ itens para:|%@ %@ elementi in:|%@ %@ объектов в:
+%@ 个压缩包|%@ archives|%@ 個のアーカイブ|압축 파일 %@개|%@ archives|%@ Archive|%@ archivos|%@ arquivos|%@ archivi|Архивов: %@
+%@\n要覆盖吗？|%@\nReplace it?|%@\n置き換えますか？|%@\n덮어쓰시겠습니까?|%@\nVoulez-vous le remplacer ?|%@\nErsetzen?|%@\n¿Reemplazarlo?|%@\nSubstituir?|%@\nSostituirlo?|%@\nЗаменить?
+%@：%@|%@: %@|%@：%@|%@: %@|%@ : %@|%@: %@|%@: %@|%@: %@|%@: %@|%@: %@
+*（全部）|* (All)|*（すべて）|* (모두)|* (Tous)|* (Alle)|* (Todos)|* (Todos)|* (Tutti)|* (Все)
+.%@：%@|.%@: %@|.%@：%@|.%@: %@|.%@ : %@|.%@: %@|.%@: %@|.%@: %@|.%@: %@|.%@: %@
+CPU 线程数：|CPU threads:|CPU スレッド数:|CPU 스레드 수:|Threads CPU :|CPU-Threads:|Hilos de CPU:|Threads da CPU:|Thread CPU:|Потоков ЦП:
+CRC：%@\n|CRC: %@\n|CRC：%@\n|CRC: %@\n|CRC : %@\n|CRC: %@\n|CRC: %@\n|CRC: %@\n|CRC: %@\n|CRC: %@\n
+Finder 右键菜单（快速操作 / 服务）|Finder context menu (Quick Actions / Services)|Finder のコンテキストメニュー（クイックアクション／サービス）|Finder 컨텍스트 메뉴(빠른 동작 / 서비스)|Menu contextuel du Finder (Actions rapides / Services)|Finder-Kontextmenü (Schnellaktionen / Dienste)|Menú contextual del Finder (Acciones rápidas / Servicios)|Menu de contexto do Finder (Ações Rápidas / Serviços)|Menu contestuale del Finder (Azioni rapide / Servizi)|Контекстное меню Finder (Быстрые действия / Службы)
+Rating（MIPS）越高越好。|A higher rating (MIPS) is better.|Rating（MIPS）は高いほど高性能です。|Rating(MIPS)이 높을수록 좋습니다.|Plus la note (MIPS) est élevée, mieux c'est.|Je höher das Rating (MIPS), desto besser.|Cuanto mayor sea la puntuación (MIPS), mejor.|Quanto maior a pontuação (MIPS), melhor.|Più alto è il punteggio (MIPS), meglio è.|Чем выше рейтинг (MIPS), тем лучше.
+\n\n说明：7zz 命令行不支持写入注释，这里只能查看。|\n\nNote: the 7zz command line can't write comments, so they are read-only here.|\n\n注: 7zz コマンドラインはコメントの書き込みに対応していないため、ここでは表示のみです。|\n\n참고: 7zz 명령줄은 주석 쓰기를 지원하지 않으므로 여기서는 보기만 가능합니다.|\n\nRemarque : la ligne de commande 7zz ne peut pas écrire de commentaires ; ils sont ici en lecture seule.|\n\nHinweis: Die 7zz-Befehlszeile kann keine Kommentare schreiben, daher sind sie hier schreibgeschützt.|\n\nNota: la línea de comandos 7zz no puede escribir comentarios, por lo que aquí son de solo lectura.|\n\nObservação: a linha de comando 7zz não grava comentários, então aqui eles são somente leitura.|\n\nNota: la riga di comando 7zz non può scrivere commenti, quindi qui sono di sola lettura.|\n\nПримечание: командная строка 7zz не умеет записывать комментарии, поэтому здесь они только для чтения.
+gzip/bzip2/xz 只能压缩单个文件，请先打包成 tar。|gzip/bzip2/xz can only compress a single file. Pack into a tar first.|gzip/bzip2/xz は単一ファイルしか圧縮できません。先に tar にまとめてください。|gzip/bzip2/xz는 파일 하나만 압축할 수 있습니다. 먼저 tar로 묶으세요.|gzip/bzip2/xz ne compressent qu'un seul fichier. Créez d'abord une archive tar.|gzip/bzip2/xz können nur eine einzelne Datei komprimieren. Packen Sie zuerst ein tar-Archiv.|gzip/bzip2/xz solo comprimen un archivo. Empaquételo primero en tar.|gzip/bzip2/xz comprimem apenas um arquivo. Empacote primeiro em tar.|gzip/bzip2/xz comprimono un solo file. Crea prima un archivio tar.|gzip/bzip2/xz сжимают только один файл. Сначала упакуйте в tar.
+macOS 压缩/解压文件管理器|Archive manager for macOS|macOS 用アーカイブマネージャ|macOS용 압축 파일 관리자|Gestionnaire d'archives pour macOS|Archivmanager für macOS|Gestor de archivos comprimidos para macOS|Gerenciador de arquivos compactados para macOS|Gestore di archivi per macOS|Менеджер архивов для macOS
+「%@」已加密|“%@” is encrypted|「%@」は暗号化されています|“%@”은(는) 암호화되어 있습니다|« %@ » est chiffré|„%@“ ist verschlüsselt|«%@» está cifrado|“%@” está criptografado|«%@» è cifrato|«%@» зашифрован
+「*」会替换成各压缩包的名称|“*” is replaced with each archive's name|「*」は各アーカイブ名に置き換えられます|“*”는 각 압축 파일 이름으로 바뀝니다|« * » est remplacé par le nom de chaque archive|„*“ wird durch den Namen des jeweiligen Archivs ersetzt|«*» se sustituye por el nombre de cada archivo|“*” é substituído pelo nome de cada arquivo|«*» viene sostituito dal nome di ogni archivio|«*» заменяется именем каждого архива
+上一级 (⌫)|Enclosing folder (⌫)|上の階層へ (⌫)|상위 폴더 (⌫)|Dossier parent (⌫)|Übergeordneter Ordner (⌫)|Carpeta contenedora (⌫)|Pasta superior (⌫)|Cartella superiore (⌫)|Вверх (⌫)
+上层文件夹|Enclosing Folder|上の階層のフォルダ|상위 폴더|Dossier parent|Übergeordneter Ordner|Carpeta contenedora|Pasta Superior|Cartella superiore|Папка уровнем выше
+下载|Downloads|ダウンロード|다운로드|Téléchargements|Downloads|Descargas|Downloads|Download|Загрузки
+不分卷|No splitting|分割しない|분할 안 함|Pas de découpage|Nicht teilen|Sin dividir|Sem dividir|Nessuna divisione|Без разбиения
+不能从压缩包中移动，已改为复制（解压）。|Items can't be moved out of an archive; they were copied (extracted) instead.|アーカイブからは移動できないため、コピー（展開）しました。|압축 파일에서 이동할 수 없어 복사(압축 해제)했습니다.|Impossible de déplacer depuis une archive ; les éléments ont été copiés (extraits).|Aus einem Archiv kann nicht verschoben werden; stattdessen wurde kopiert (entpackt).|No se puede mover desde un archivo; se copió (extrajo) en su lugar.|Não é possível mover de um arquivo compactado; os itens foram copiados (extraídos).|Impossibile spostare da un archivio; gli elementi sono stati copiati (estratti).|Нельзя перемещать из архива — объекты скопированы (извлечены).
+两次输入的密码不同。|The passwords don't match.|パスワードが一致しません。|암호가 일치하지 않습니다.|Les mots de passe ne correspondent pas.|Die Passwörter stimmen nicht überein.|Las contraseñas no coinciden.|As senhas não coincidem.|Le password non corrispondono.|Пароли не совпадают.
+个人|Home|ホーム|홈|Départ|Benutzerordner|Inicio|Início|Inizio|Домой
+为列表|as List|リスト|목록으로|par liste|als Liste|como lista|como Lista|come elenco|списком
+为图标|as Icons|アイコン|아이콘으로|par icônes|als Symbole|como iconos|como Ícones|come icone|значками
+为小图标|as Small Icons|小さいアイコン|작은 아이콘으로|par petites icônes|als kleine Symbole|como iconos pequeños|como Ícones Pequenos|come icone piccole|мелкими значками
+为详细信息|as Details|詳細|세부사항으로|par détails|als Details|como detalles|como Detalhes|come dettagli|таблицей
+仅存储|Store|無圧縮|저장만|Stockage|Speichern|Almacenar|Armazenar|Memorizza|Без сжатия
+从压缩包中删除 %@ 个项目？此操作不可撤销。|Delete %@ items from the archive? This can't be undone.|アーカイブから %@ 項目を削除しますか？この操作は取り消せません。|압축 파일에서 %@개 항목을 삭제하시겠습니까? 되돌릴 수 없습니다.|Supprimer %@ éléments de l'archive ? Cette action est irréversible.|%@ Objekte aus dem Archiv löschen? Dies kann nicht widerrufen werden.|¿Eliminar %@ elementos del archivo? No se puede deshacer.|Apagar %@ itens do arquivo? Não é possível desfazer.|Eliminare %@ elementi dall'archivio? L'operazione non è reversibile.|Удалить %@ объектов из архива? Это действие необратимо.
+信息|Info|情報|정보|Infos|Info|Información|Informações|Info|Свойства
+修改日期|Date Modified|変更日|수정일|Date de modification|Änderungsdatum|Fecha de modificación|Data de Modificação|Data modifica|Дата изменения
+修改时间|Modified|変更日時|수정일|Modifié|Geändert|Modificado|Modificado|Modificato|Изменён
+修改时间 %@|Modified %@|変更日時 %@|수정일 %@|Modifié %@|Geändert %@|Modificado %@|Modificado %@|Modificato %@|Изменён %@
+修改时间：%@\n创建时间：%@\n属性：%@\n|Modified: %@\nCreated: %@\nAttributes: %@\n|変更日時: %@\n作成日時: %@\n属性: %@\n|수정일: %@\n생성일: %@\n속성: %@\n|Modifié : %@\nCréé : %@\nAttributs : %@\n|Geändert: %@\nErstellt: %@\nAttribute: %@\n|Modificado: %@\nCreado: %@\nAtributos: %@\n|Modificado: %@\nCriado: %@\nAtributos: %@\n|Modificato: %@\nCreato: %@\nAttributi: %@\n|Изменён: %@\nСоздан: %@\nАтрибуты: %@\n
+停止|Stop|停止|중지|Arrêter|Stoppen|Detener|Parar|Interrompi|Остановить
+全否|No to All|すべていいえ|모두 아니요|Non à tout|Nein, alle|No a todo|Não para Todos|No a tutti|Нет для всех
+全是|Yes to All|すべてはい|모두 예|Oui à tout|Ja, alle|Sí a todo|Sim para Todos|Sì a tutti|Да для всех
+全选|Select All|すべてを選択|모두 선택|Tout sélectionner|Alles auswählen|Seleccionar todo|Selecionar Tudo|Seleziona tutto|Выбрать все
+全部|All|すべて|모두|Tout|Alle|Todo|Tudo|Tutto|Все
+全部取消|Deselect All|すべて解除|모두 해제|Tout désélectionner|Alle abwählen|Desmarcar todo|Desmarcar Tudo|Deseleziona tutto|Снять все
+全部算法|All Algorithms|すべてのアルゴリズム|모든 알고리즘|Tous les algorithmes|Alle Algorithmen|Todos los algoritmos|Todos os Algoritmos|Tutti gli algoritmi|Все алгоритмы
+全部选中|Select All|すべて選択|모두 선택|Tout cocher|Alle auswählen|Marcar todo|Marcar Tudo|Seleziona tutti|Отметить все
+关于 iDipper|About iDipper|iDipper について|iDipper 에 관하여|À propos de iDipper|Über iDipper|Acerca de iDipper|Sobre o iDipper|Informazioni su iDipper|О программе iDipper
+分割到：|Split to:|分割先:|분할 위치:|Découper vers :|Teilen nach:|Dividir en:|Dividir em:|Dividi in:|Разбить в:
+分割失败|Split Failed|分割できませんでした|분할 실패|Échec du découpage|Teilen fehlgeschlagen|Error al dividir|Falha ao dividir|Divisione non riuscita|Не удалось разбить
+分割完成|Split Complete|分割が完了しました|분할 완료|Découpage terminé|Teilen abgeschlossen|División completada|Divisão concluída|Divisione completata|Разбиение завершено
+分割文件|Split File|ファイルを分割|파일 분할|Découper le fichier|Datei teilen|Dividir archivo|Dividir Arquivo|Dividi file|Разбить файл
+分割文件…|Split File…|ファイルを分割…|파일 분할…|Découper le fichier…|Datei teilen …|Dividir archivo…|Dividir Arquivo…|Dividi file…|Разбить файл…
+分卷大小（如 10M、100M、650M、4092M）：|Volume size (e.g. 10M, 100M, 650M, 4092M):|分割サイズ（例: 10M、100M、650M、4092M）:|분할 크기(예: 10M, 100M, 650M, 4092M):|Taille des volumes (ex. 10M, 100M, 650M, 4092M) :|Teilgröße (z. B. 10M, 100M, 650M, 4092M):|Tamaño de volumen (p. ej., 10M, 100M, 650M, 4092M):|Tamanho do volume (ex.: 10M, 100M, 650M, 4092M):|Dimensione volumi (es. 10M, 100M, 650M, 4092M):|Размер тома (напр. 10M, 100M, 650M, 4092M):
+分卷大小：|Split into volumes:|分割サイズ:|분할 크기:|Découper en volumes :|In Teile aufteilen:|Dividir en volúmenes:|Dividir em volumes:|Dividi in volumi:|Разбить на тома:
+创建时间|Created|作成日時|생성일|Créé|Erstellt|Creado|Criado|Creato|Создан
+创建自释放程序（macOS 不支持）|Create SFX archive (not available on macOS)|自己解凍形式を作成（macOS 非対応）|자동 압축 풀림 파일 만들기(macOS 미지원)|Créer une archive SFX (indisponible sur macOS)|SFX-Archiv erstellen (unter macOS nicht verfügbar)|Crear archivo SFX (no disponible en macOS)|Criar arquivo SFX (indisponível no macOS)|Crea archivio SFX (non disponibile su macOS)|Создать SFX-архив (недоступно в macOS)
+删除|Delete|削除|삭제|Supprimer|Löschen|Eliminar|Apagar|Elimina|Удалить
+删除失败|Delete Failed|削除できませんでした|삭제 실패|Échec de la suppression|Löschen fehlgeschlagen|Error al eliminar|Falha ao apagar|Eliminazione non riuscita|Не удалось удалить
+刷新|Refresh|更新|새로 고침|Actualiser|Aktualisieren|Actualizar|Atualizar|Aggiorna|Обновить
+刷新服务菜单|Refresh Services Menu|サービスメニューを更新|서비스 메뉴 새로 고침|Actualiser le menu Services|Dienste-Menü aktualisieren|Actualizar menú Servicios|Atualizar Menu Serviços|Aggiorna menu Servizi|Обновить меню «Службы»
+前往|Go|移動|이동|Aller|Gehe zu|Ir|Ir|Vai|Переход
+前往文件夹|Go to Folder|フォルダへ移動|폴더로 이동|Aller au dossier|Gehe zum Ordner|Ir a la carpeta|Ir para a Pasta|Vai alla cartella|Переход к папке
+前往文件夹…|Go to Folder…|フォルダへ移動…|폴더로 이동…|Aller au dossier…|Gehe zum Ordner …|Ir a la carpeta…|Ir para a Pasta…|Vai alla cartella…|Переход к папке…
+前进|Forward|進む|앞으로|Suivant|Vorwärts|Adelante|Avançar|Avanti|Вперед
+剩余时间：|Remaining:|残り時間:|남은 시간:|Restant :|Verbleibend:|Restante:|Restante:|Rimanente:|Осталось:
+剪切|Cut|カット|오려두기|Couper|Ausschneiden|Cortar|Recortar|Taglia|Вырезать
+加密|Encryption|暗号化|암호화|Chiffrement|Verschlüsselung|Cifrado|Criptografia|Crittografia|Шифрование
+加密文件名|Encrypt file names|ファイル名を暗号化|파일 이름 암호화|Chiffrer les noms de fichiers|Dateinamen verschlüsseln|Cifrar nombres de archivo|Criptografar nomes de arquivo|Cifra i nomi dei file|Шифровать имена файлов
+加密方法：|Encryption method:|暗号化方式:|암호화 방식:|Méthode de chiffrement :|Verschlüsselungsverfahren:|Método de cifrado:|Método de criptografia:|Metodo di crittografia:|Метод шифрования:
+加密：%@\n|Encrypted: %@\n|暗号化: %@\n|암호화: %@\n|Chiffré : %@\n|Verschlüsselt: %@\n|Cifrado: %@\n|Criptografado: %@\n|Cifrato: %@\n|Зашифрован: %@\n
+iDipper|iDipper|iDipper|iDipper|iDipper|iDipper|iDipper|iDipper|iDipper|iDipper
+iDipper|iDipper|iDipper|iDipper|iDipper|iDipper|iDipper|iDipper|iDipper|iDipper
+iDipper：CRC SHA 校验|iDipper: CRC SHA Checksum|iDipper: CRC SHA チェックサム|iDipper: CRC SHA 체크섬|iDipper : somme de contrôle CRC SHA|iDipper: CRC-SHA-Prüfsumme|iDipper: suma de comprobación CRC SHA|iDipper: Checksum CRC SHA|iDipper: checksum CRC SHA|iDipper: контрольная сумма CRC SHA
+iDipper：压缩为 .7z|iDipper: Compress to .7z|iDipper: .7z に圧縮|iDipper: .7z로 압축|iDipper : compresser en .7z|iDipper: Als .7z komprimieren|iDipper: comprimir en .7z|iDipper: Compactar em .7z|iDipper: comprimi in .7z|iDipper: сжать в .7z
+iDipper：压缩为 .zip|iDipper: Compress to .zip|iDipper: .zip に圧縮|iDipper: .zip으로 압축|iDipper : compresser en .zip|iDipper: Als .zip komprimieren|iDipper: comprimir en .zip|iDipper: Compactar em .zip|iDipper: comprimi in .zip|iDipper: сжать в .zip
+iDipper：添加到压缩包…|iDipper: Add to Archive…|iDipper: アーカイブに追加…|iDipper: 압축 파일에 추가…|iDipper : ajouter à l'archive…|iDipper: Zum Archiv hinzufügen …|iDipper: añadir al archivo…|iDipper: Adicionar ao Arquivo…|iDipper: aggiungi all'archivio…|iDipper: добавить в архив…
+iDipper：解压到同名文件夹|iDipper: Extract to Folder|iDipper: 同名フォルダに展開|iDipper: 같은 이름의 폴더에 압축 풀기|iDipper : extraire dans un dossier|iDipper: In Ordner entpacken|iDipper: extraer en carpeta|iDipper: Extrair para Pasta|iDipper: estrai in una cartella|iDipper: извлечь в папку
+iDipper：解压到当前位置|iDipper: Extract Here|iDipper: ここに展開|iDipper: 여기에 압축 풀기|iDipper : extraire ici|iDipper: Hier entpacken|iDipper: extraer aquí|iDipper: Extrair Aqui|iDipper: estrai qui|iDipper: извлечь сюда
+单词大小：|Word size:|ワードサイズ:|단어 크기:|Taille des mots :|Wortgröße:|Tamaño de palabra:|Tamanho da palavra:|Dimensione parola:|Размер слова:
+压缩出错|Compression Error|圧縮エラー|압축 오류|Erreur de compression|Komprimierungsfehler|Error de compresión|Erro de compactação|Errore di compressione|Ошибка сжатия
+压缩包注释…|Archive Comment…|アーカイブのコメント…|압축 파일 주석…|Commentaire de l'archive…|Archivkommentar …|Comentario del archivo…|Comentário do Arquivo…|Commento archivio…|Комментарий архива…
+压缩包：|Archive:|アーカイブ:|압축 파일:|Archive :|Archiv:|Archivo:|Arquivo:|Archivio:|Архив:
+压缩包：%@\n|Archive: %@\n|アーカイブ: %@\n|압축 파일: %@\n|Archive : %@\n|Archiv: %@\n|Archivo: %@\n|Arquivo: %@\n|Archivio: %@\n|Архив: %@\n
+压缩后删除源文件（移到废纸篓）|Delete files after compression (move to Trash)|圧縮後に元ファイルを削除（ゴミ箱へ）|압축 후 원본 삭제(휴지통으로)|Supprimer les fichiers après compression (Corbeille)|Dateien nach dem Komprimieren löschen (Papierkorb)|Eliminar archivos tras comprimir (a la Papelera)|Apagar arquivos após compactar (para o Lixo)|Elimina i file dopo la compressione (nel Cestino)|Удалить файлы после сжатия (в Корзину)
+压缩后大小|Packed Size|圧縮後サイズ|압축 크기|Taille compressée|Gepackte Größe|Tamaño comprimido|Tamanho compactado|Dimensione compressa|Сжатый
+压缩后大小：%@\n|Packed size: %@\n|圧縮後サイズ: %@\n|압축 크기: %@\n|Taille compressée : %@\n|Gepackte Größe: %@\n|Tamaño comprimido: %@\n|Tamanho compactado: %@\n|Dimensione compressa: %@\n|Сжатый размер: %@\n
+压缩失败|Compression Failed|圧縮できませんでした|압축 실패|Échec de la compression|Komprimieren fehlgeschlagen|Error al comprimir|Falha ao compactar|Compressione non riuscita|Не удалось сжать
+压缩引擎：|Compression engine: |圧縮エンジン: |압축 엔진: |Moteur de compression : |Komprimierungs-Engine: |Motor de compresión: |Mecanismo de compactação: |Motore di compressione: |Движок сжатия: 
+压缩所需内存：|Memory for compressing:|圧縮に必要なメモリ:|압축에 필요한 메모리:|Mémoire pour la compression :|Speicher zum Komprimieren:|Memoria para comprimir:|Memória para compactar:|Memoria per comprimere:|Память для сжатия:
+压缩方法：|Compression method:|圧縮方式:|압축 방식:|Méthode de compression :|Komprimierungsverfahren:|Método de compresión:|Método de compactação:|Metodo di compressione:|Метод сжатия:
+压缩格式：|Archive format:|アーカイブ形式:|압축 형식:|Format d'archive :|Archivformat:|Formato de archivo:|Formato do arquivo:|Formato archivio:|Формат архива:
+压缩率：|Ratio:|圧縮率:|압축률:|Taux :|Verhältnis:|Ratio:|Taxa:|Rapporto:|Степень:
+压缩等级：|Compression level:|圧縮レベル:|압축 수준:|Niveau de compression :|Kompressionsstufe:|Nivel de compresión:|Nível de compactação:|Livello di compressione:|Уровень сжатия:
+参数：|Parameters:|パラメータ:|매개변수:|Paramètres :|Parameter:|Parámetros:|Parâmetros:|Parametri:|Параметры:
+反向选择|Invert Selection|選択範囲を反転|선택 반전|Inverser la sélection|Auswahl umkehren|Invertir selección|Inverter Seleção|Inverti selezione|Инвертировать выделение
+取消|Cancel|キャンセル|취소|Annuler|Abbrechen|Cancelar|Cancelar|Annulla|Отмена
+取消全选|Deselect All|選択を解除|모두 선택 해제|Tout désélectionner|Auswahl aufheben|Anular selección|Desmarcar Tudo|Deseleziona tutto|Снять выделение
+取消关联会把该类型交还给系统「归档实用工具」。macOS 可能会弹窗请你确认。|Unchecking a type hands it back to Archive Utility. macOS may ask you to confirm.|チェックを外すと、その形式は「アーカイブユーティリティ」に戻ります。macOS が確認を求める場合があります。|선택을 해제하면 해당 형식이 '아카이브 유틸리티'로 돌아갑니다. macOS에서 확인을 요청할 수 있습니다.|Décocher un type le rend à l'Utilitaire d'archive. macOS peut vous demander de confirmer.|Deaktivierte Typen werden wieder dem Archivierungsprogramm zugewiesen. macOS fragt eventuell nach einer Bestätigung.|Al desmarcar un tipo se devuelve a la Utilidad de Archivos. macOS puede pedirte confirmación.|Desmarcar um tipo o devolve ao Utilitário de Compressão. O macOS pode pedir confirmação.|Deselezionando un tipo lo si restituisce a Utility Compressione. macOS potrebbe chiedere conferma.|Снятие отметки возвращает тип программе «Утилита архивов». macOS может попросить подтверждение.
+取消选择|Deselect|選択解除|선택 해제|Désélectionner|Abwählen|Desmarcar|Desmarcar|Deseleziona|Снять выделение
+只刷新已存在的文件|Freshen existing files|既存ファイルのみ更新|기존 파일만 새로 고침|Actualiser les fichiers existants|Nur vorhandene Dateien auffrischen|Refrescar archivos existentes|Atualizar só arquivos existentes|Aggiorna solo i file esistenti|Только обновить существующие
+只解压选中的 %@ 个项目|Only the %@ selected items will be extracted|選択した %@ 項目のみ展開します|선택한 %@개 항목만 압축 해제|Seuls les %@ éléments sélectionnés seront extraits|Nur die %@ ausgewählten Objekte werden entpackt|Solo se extraerán los %@ elementos seleccionados|Apenas os %@ itens selecionados serão extraídos|Verranno estratti solo i %@ elementi selezionati|Будут извлечены только выбранные объекты: %@
+合并 %@ 个分卷到：|Combine %@ volumes into:|%@ 個の分割ファイルの結合先:|%@개 분할 파일을 합칠 위치:|Combiner %@ volumes dans :|%@ Teile zusammenfügen nach:|Combinar %@ volúmenes en:|Combinar %@ volumes em:|Unisci %@ volumi in:|Объединить тома (%@) в:
+合并失败|Combine Failed|結合できませんでした|합치기 실패|Échec de la combinaison|Zusammenfügen fehlgeschlagen|Error al combinar|Falha ao combinar|Unione non riuscita|Не удалось объединить
+合并完成|Combine Complete|結合が完了しました|합치기 완료|Combinaison terminée|Zusammenfügen abgeschlossen|Combinación completada|Combinação concluída|Unione completata|Объединение завершено
+合并文件|Combine Files|ファイルを結合|파일 합치기|Combiner les fichiers|Dateien zusammenfügen|Combinar archivos|Combinar Arquivos|Unisci file|Объединить файлы
+合并文件…|Combine Files…|ファイルを結合…|파일 합치기…|Combiner les fichiers…|Dateien zusammenfügen …|Combinar archivos…|Combinar Arquivos…|Unisci file…|Объединить файлы…
+同步压缩包内容|Synchronize archive contents|アーカイブを同期|압축 파일 내용 동기화|Synchroniser le contenu de l'archive|Archivinhalt synchronisieren|Sincronizar contenido del archivo|Sincronizar conteúdo do arquivo|Sincronizza contenuto archivio|Синхронизировать содержимое
+名称|Name|名前|이름|Nom|Name|Nombre|Nome|Nome|Имя
+名称：|Name:|名前:|이름:|Nom :|Name:|Nombre:|Nome:|Nome:|Имя:
+名称：%@\n路径：%@\n|Name: %@\nPath: %@\n|名前: %@\nパス: %@\n|이름: %@\n경로: %@\n|Nom : %@\nChemin : %@\n|Name: %@\nPfad: %@\n|Nombre: %@\nRuta: %@\n|Nome: %@\nCaminho: %@\n|Nome: %@\nPercorso: %@\n|Имя: %@\nПуть: %@\n
+后台|Background|バックグラウンド|백그라운드|Arrière-plan|Hintergrund|Segundo plano|Segundo plano|In background|В фоне
+后台任务 %@%|Background task %@%|バックグラウンド処理 %@%|백그라운드 작업 %@%|Tâche en arrière-plan %@%|Hintergrundaufgabe %@%|Tarea en segundo plano %@%|Tarefa em segundo plano %@%|Attività in background %@%|Фоновая задача %@%
+后退|Back|戻る|뒤로|Précédent|Zurück|Atrás|Voltar|Indietro|Назад
+否|No|いいえ|아니요|Non|Nein|No|Não|No|Нет
+固实|Solid|ソリッド|솔리드|Solide|Solid|Sólido|Sólido|Solido|Непрерывный
+固实数据大小：|Solid block size:|ソリッドブロックサイズ:|솔리드 블록 크기:|Taille de bloc solide :|Solid-Blockgröße:|Tamaño de bloque sólido:|Tamanho do bloco sólido:|Dimensione blocco solido:|Размер непрерывного блока:
+在 Finder 中右键文件 → 「快速操作」或「服务」可看到：|Right-click a file in Finder → Quick Actions or Services to find:|Finder でファイルを右クリック →「クイックアクション」または「サービス」に表示されます:|Finder에서 파일을 오른쪽 클릭 → '빠른 동작' 또는 '서비스'에서 볼 수 있습니다:|Dans le Finder, clic droit sur un fichier → Actions rapides ou Services :|Im Finder eine Datei rechtsklicken → Schnellaktionen oder Dienste:|En el Finder, clic derecho en un archivo → Acciones rápidas o Servicios:|No Finder, clique com o botão direito → Ações Rápidas ou Serviços:|Nel Finder, clic destro su un file → Azioni rapide o Servizi:|В Finder щелкните файл правой кнопкой → «Быстрые действия» или «Службы»:
+在内部打开|Open Inside|内部で開く|내부에서 열기|Ouvrir à l'intérieur|Intern öffnen|Abrir dentro|Abrir Dentro|Apri all'interno|Открыть внутри
+在压缩包内浏览|Browse Archive|アーカイブ内を表示|압축 파일 탐색|Parcourir l'archive|Archiv durchsuchen|Explorar archivo|Navegar no Arquivo|Sfoglia archivio|Просмотреть архив
+在外部打开|Open Outside|外部で開く|외부에서 열기|Ouvrir à l'extérieur|Extern öffnen|Abrir fuera|Abrir Fora|Apri all'esterno|Открыть снаружи
+地址|Address|場所|주소|Adresse|Adresse|Dirección|Endereço|Indirizzo|Адрес
+复制|Copy|コピー|복사|Copier|Kopieren|Copiar|Copiar|Copia|Копировать
+复制全部|Copy All|すべてコピー|모두 복사|Tout copier|Alles kopieren|Copiar todo|Copiar Tudo|Copia tutto|Копировать все
+复制到…|Copy To…|コピー先…|다음으로 복사…|Copier vers…|Kopieren nach …|Copiar a…|Copiar para…|Copia in…|Копировать в…
+复制到压缩包|Copy to Archive|アーカイブにコピー|압축 파일로 복사|Copier dans l'archive|In Archiv kopieren|Copiar al archivo|Copiar para o Arquivo|Copia nell'archivio|Копировать в архив
+复制到：|Copy to:|コピー先:|복사 위치:|Copier vers :|Kopieren nach:|Copiar a:|Copiar para:|Copia in:|Копировать в:
+大小|Size|サイズ|크기|Taille|Größe|Tamaño|Tamanho|Dimensione|Размер
+大小：%@（%@）\n|Size: %@ (%@)\n|サイズ: %@（%@）\n|크기: %@ (%@)\n|Taille : %@ (%@)\n|Größe: %@ (%@)\n|Tamaño: %@ (%@)\n|Tamanho: %@ (%@)\n|Dimensione: %@ (%@)\n|Размер: %@ (%@)\n
+如 -mf=off|e.g. -mf=off|例: -mf=off|예: -mf=off|ex. -mf=off|z. B. -mf=off|p. ej., -mf=off|ex.: -mf=off|es. -mf=off|напр. -mf=off
