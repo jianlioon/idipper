@@ -119,12 +119,22 @@ final class AppModel: ObservableObject {
             extractReq = ExtractRequest(archives: arcs, items: [], dest: destOverride ?? defaultDest(arcs[0], multi: arcs.count > 1), password: "")
         }
     }
+    /// Last folder chosen in the extract dialog; otherwise the archive's own directory.
     func defaultDest(_ a: URL, multi: Bool) -> String {
-        let parent = a.deletingLastPathComponent()
-        if multi { return parent.appendingPathComponent("*").path }
-        let d = parent.appendingPathComponent(archiveBaseName(a)).path
-        if FileManager.default.fileExists(atPath: d) && !isDirPath(d) { return parent.path }
-        return d
+        let parent = a.deletingLastPathComponent().path
+        if var last = UserDefaults.standard.string(forKey: "lastExtractDest"), !last.isEmpty {
+            if !multi {
+                if last.hasSuffix("/*") { last.removeLast(2) }
+                else if last.hasSuffix("*") { last.removeLast() }
+            }
+            if !last.isEmpty { return last }
+        }
+        return parent
+    }
+    func rememberExtractDest(_ dest: String) {
+        let d = dest.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !d.isEmpty else { return }
+        UserDefaults.standard.set(d, forKey: "lastExtractDest")
     }
     func test() {
         let p = cur
