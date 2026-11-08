@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		037CF7FAEF9FAA7B3340143F /* 7zz in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB2497A32BC87CA353AA03CA /* 7zz */; };
+		B8D42F6C01E3507B9C2D1F22 /* unrar in CopyFiles */ = {isa = PBXBuildFile; fileRef = A7C31E5B90D24F6A8B1C0E11 /* unrar */; };
+		D0F6418E23A5729D1E4F3144 /* unrar-License.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9E5307D12F4618C0D3E2033 /* unrar-License.txt */; };
+		F218630045C7941F30615566 /* Rar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E107529F34B6830E2F504455 /* Rar.swift */; };
 		30F146F54AA8DA113846E24C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CE0A1FC63A43FC05EE7D1F9 /* Assets.xcassets */; };
 		36A489B558F263BA55CBDD35 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993F5571023B6DBAEEBDD6A /* Views.swift */; };
 		3A8B50C9AF1D62D763118924 /* Dialogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28314E231AF237E1DDF747B4 /* Dialogs.swift */; };
@@ -30,6 +33,7 @@
 			dstSubfolderSpec = 6;
 			files = (
 				037CF7FAEF9FAA7B3340143F /* 7zz in CopyFiles */,
+				B8D42F6C01E3507B9C2D1F22 /* unrar in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +55,9 @@
 		3F2955C9F2C99018523F42A4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C315778C6E3BD2BF553A8A0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		502DD9F22A522B97011E4CE4 /* 7zip-License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "7zip-License.txt"; sourceTree = "<group>"; };
+		A7C31E5B90D24F6A8B1C0E11 /* unrar */ = {isa = PBXFileReference; path = unrar; sourceTree = "<group>"; };
+		C9E5307D12F4618C0D3E2033 /* unrar-License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "unrar-License.txt"; sourceTree = "<group>"; };
+		E107529F34B6830E2F504455 /* Rar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rar.swift; sourceTree = "<group>"; };
 		5D9313CCCAE5E05EE7D15BD4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ServicesMenu.strings"; sourceTree = "<group>"; };
 		61B914F1D5A34CF37BCDF111 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6B482A0EE8D1F11543A5BDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -90,6 +97,7 @@
 				814D163B6315633164AAB745 /* App.swift */,
 				28ABD5B506978BDD347C917F /* AppModel.swift */,
 				2446602570D1016CD1A919D2 /* Core.swift */,
+				E107529F34B6830E2F504455 /* Rar.swift */,
 				28314E231AF237E1DDF747B4 /* Dialogs.swift */,
 				81F6DCCF240AC38E3F12C873 /* Panel.swift */,
 				D993F5571023B6DBAEEBDD6A /* Views.swift */,
@@ -109,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				AB2497A32BC87CA353AA03CA /* 7zz */,
+				A7C31E5B90D24F6A8B1C0E11 /* unrar */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -128,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				502DD9F22A522B97011E4CE4 /* 7zip-License.txt */,
+				C9E5307D12F4618C0D3E2033 /* unrar-License.txt */,
 				4D1DDEFAC6169DD0B11C309E /* InfoPlist.strings */,
 				0773FD7A09B84BEB369527D5 /* Localizable.strings */,
 				8A2DA3098FC5E96C9DB09EDC /* ServicesMenu.strings */,
@@ -147,7 +157,7 @@
 				18AFFC77E98566631B3145F5 /* Sources */,
 				7CD6B9F60B86294DEE7D9B8E /* Resources */,
 				3E18A6DECB15741F346168F2 /* CopyFiles */,
-				D9EC744B7445DB871FF2F302 /* Sign bundled 7zz (sandbox inherit) */,
+				D9EC744B7445DB871FF2F302 /* Sign bundled helpers (sandbox inherit) */,
 			);
 			buildRules = (
 			);
@@ -210,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0806C697E0E3FF18E98B3DB /* 7zip-License.txt in Resources */,
+				D0F6418E23A5729D1E4F3144 /* unrar-License.txt in Resources */,
 				30F146F54AA8DA113846E24C /* Assets.xcassets in Resources */,
 				794A4D094DFDAA4A89EF531F /* InfoPlist.strings in Resources */,
 				EF4E7DE34074F414244E051F /* Localizable.strings in Resources */,
@@ -258,7 +269,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$SRCROOT/tools/bump.sh\"";
 		};
-		D9EC744B7445DB871FF2F302 /* Sign bundled 7zz (sandbox inherit) */ = {
+		D9EC744B7445DB871FF2F302 /* Sign bundled helpers (sandbox inherit) */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -268,14 +279,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Sign bundled 7zz (sandbox inherit)";
+			name = "Sign bundled helpers (sandbox inherit)";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -n \"$DWARF_DSYM_FOLDER_PATH\" ]; then /usr/bin/xcrun dsymutil \"$TARGET_BUILD_DIR/$EXECUTABLE_FOLDER_PATH/7zz\" -o \"$DWARF_DSYM_FOLDER_PATH/7zz.dSYM\" 2>/dev/null || true; fi\nID=\"${EXPANDED_CODE_SIGN_IDENTITY:--}\"\n/usr/bin/codesign --force --sign \"$ID\" -o runtime --timestamp --entitlements \"$SRCROOT/tools/7zz.entitlements\" \"$TARGET_BUILD_DIR/$EXECUTABLE_FOLDER_PATH/7zz\"\n";
+			shellScript = "ID=\"${EXPANDED_CODE_SIGN_IDENTITY:--}\"\nsign_helper() {\n  name=\"$1\"\n  bin=\"$TARGET_BUILD_DIR/$EXECUTABLE_FOLDER_PATH/$name\"\n  if [ ! -f \"$bin\" ]; then return 0; fi\n  if [ -n \"$DWARF_DSYM_FOLDER_PATH\" ]; then /usr/bin/xcrun dsymutil \"$bin\" -o \"$DWARF_DSYM_FOLDER_PATH/$name.dSYM\" 2>/dev/null || true; fi\n  /usr/bin/codesign --force --sign \"$ID\" -o runtime --timestamp --entitlements \"$SRCROOT/tools/7zz.entitlements\" \"$bin\"\n}\nsign_helper 7zz\nsign_helper unrar\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -288,6 +299,7 @@
 				BFD8BFFED67ECEC9383CB29E /* App.swift in Sources */,
 				6310CAA428CD08402679CE57 /* AppModel.swift in Sources */,
 				D355DA0521C293B2E5ED09C0 /* Core.swift in Sources */,
+				F218630045C7941F30615566 /* Rar.swift in Sources */,
 				3A8B50C9AF1D62D763118924 /* Dialogs.swift in Sources */,
 				9025F7F65E2BD2C433D61554 /* Panel.swift in Sources */,
 				36A489B558F263BA55CBDD35 /* Views.swift in Sources */,

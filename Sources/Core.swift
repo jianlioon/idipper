@@ -165,17 +165,38 @@ final class Runner: ObservableObject {
     var cancelled = false
     var window: NSWindow?
     var lastProgAt: CFAbsoluteTime = 0
+    var callCount = 1
+    var callIndex = 0
+    private var combined = ""
+    private var queue: [ToolCall] = []
 
-    static func runSync(_ args: [String], cwd: URL? = nil) -> (Int32, String) {
-        if ["x","e","a","u","d","rn"].contains(args.first ?? "") { Access.ensure(args: args, cwd: cwd) }
-        let p = Process(); p.executableURL = URL(fileURLWithPath: SEVENZ); p.arguments = args
+    static func launchSync(_ call: ToolCall, cwd: URL?) -> (Int32, String) {
+        if !FileManager.default.isExecutableFile(atPath: call.executable) {
+            if call.executable == UNRAR { return (-1, unrarMissingText()) }
+            return (-1, "Cannot run \(call.executable)")
+        }
+        let p = Process(); p.executableURL = URL(fileURLWithPath: call.executable); p.arguments = call.arguments
         if let cwd { p.currentDirectoryURL = cwd }
         let pipe = Pipe(); p.standardOutput = pipe; p.standardError = pipe
         p.standardInput = FileHandle.nullDevice
         do { try p.run() } catch { return (-1, "\(error)") }
         let d = pipe.fileHandleForReading.readDataToEndOfFile()
         p.waitUntilExit()
-        return (p.terminationStatus, String(decoding: d, as: UTF8.self))
+        let text = String(decoding: d, as: UTF8.self)
+        return call.executable == UNRAR ? annotateUnrarResult(p.terminationStatus, text) : (p.terminationStatus, text)
+    }
+
+    static func runSync(_ args: [String], cwd: URL? = nil) -> (Int32, String) {
+        if ["x","e","a","u","d","rn"].contains(args.first ?? "") { Access.ensure(args: args, cwd: cwd) }
+        var all = ""
+        for call in planToolCalls(args, progress: false) {
+            let snap = rootSnapshot(call.elimRoot)
+            let (code, out) = launchSync(call, cwd: cwd)
+            if code == 0, let dest = call.elimRoot { eliminateSingleRoot(dest, previous: snap) }
+            all += out
+            if code != 0 { return (code, all) }
+        }
+        return (0, all)
     }
 
     var elapsed: TimeInterval { Date().timeIntervalSince(start) - pausedTotal - (pausedAt.map { Date().timeIntervalSince($0) } ?? 0) }
@@ -185,8 +206,23 @@ final class Runner: ObservableObject {
         if ["x","e","a","u","d","rn"].contains(args.first ?? "") { Access.ensure(args: args, cwd: cwd) }
         self.title = title; percent = 0; current = ""; files = 0; running = true; cancelled = false; paused = false
         start = Date(); pausedAt = nil; pausedTotal = 0; self.total = total; self.ratioPath = ratioPath
-        let p = Process(); p.executableURL = URL(fileURLWithPath: SEVENZ)
-        p.arguments = [args[0], "-bsp1", "-bb0", "-y"] + args.dropFirst()
+        queue = planToolCalls(args, progress: true)
+        callCount = max(queue.count, 1); callIndex = 0; combined = ""
+        showWindow()
+        startCall(0, cwd: cwd, done: done)
+    }
+
+    private func startCall(_ index: Int, cwd: URL?, done: @escaping (Int32, String) -> Void) {
+        guard index < queue.count else { finish(0, done: done); return }
+        let call = queue[index]
+        callIndex = index
+        if !FileManager.default.isExecutableFile(atPath: call.executable) {
+            combined += call.executable == UNRAR ? unrarMissingText() : "Cannot run \(call.executable)\n"
+            finish(-1, done: done)
+            return
+        }
+        let snap = rootSnapshot(call.elimRoot)
+        let p = Process(); p.executableURL = URL(fileURLWithPath: call.executable); p.arguments = call.arguments
         if let cwd { p.currentDirectoryURL = cwd }
         p.standardInput = FileHandle.nullDevice
         let out = Pipe(), err = Pipe(); p.standardOutput = out; p.standardError = err
@@ -197,22 +233,34 @@ final class Runner: ObservableObject {
             let s = String(decoding: d, as: UTF8.self)
             lock.lock(); all += s; lock.unlock()
             let parts = s.split(whereSeparator: { $0 == "\u{8}" || $0 == "\r" || $0 == "\n" })
-            for part in parts.reversed() {
+            var n: Double?; var fc: Int?; var file = ""
+            for part in parts {
                 let t = part.trimmingCharacters(in: .whitespaces)
+                if t.isEmpty { continue }
+                if let f = unrarActivityPath(t) { file = f }
                 let ns = t as NSString
                 if let m = re.firstMatch(in: t, range: NSRange(location: 0, length: ns.length)) {
-                    let n = Double(ns.substring(with: m.range(at: 1))) ?? 0
-                    let fc = m.range(at: 2).location != NSNotFound ? Int(ns.substring(with: m.range(at: 2))) : nil
-                    let file = m.range(at: 3).location != NSNotFound ? ns.substring(with: m.range(at: 3)) : ""
-                    let now = CFAbsoluteTimeGetCurrent()
-                    if n < 100, now - (self?.lastProgAt ?? 0) < 0.08 { break }
-                    self?.lastProgAt = now
-                    DispatchQueue.main.async {
-                        self?.percent = n; if let fc { self?.files = fc }
-                        if !file.isEmpty { self?.current = file }
+                    n = Double(ns.substring(with: m.range(at: 1))) ?? n
+                    if m.range(at: 2).location != NSNotFound { fc = Int(ns.substring(with: m.range(at: 2))) }
+                    if m.range(at: 3).location != NSNotFound {
+                        let f = ns.substring(with: m.range(at: 3))
+                        if !f.isEmpty { file = f }
                     }
-                    break
                 }
+            }
+            guard n != nil || !file.isEmpty else { return }
+            let shown = n ?? 0
+            let now = CFAbsoluteTimeGetCurrent()
+            if shown < 100, now - (self?.lastProgAt ?? 0) < 0.08, file.isEmpty { return }
+            self?.lastProgAt = now
+            let count = self?.callCount ?? 1
+            let idx = self?.callIndex ?? 0
+            let span = 100.0 / Double(max(count, 1))
+            let overall = Double(idx) * span + shown / 100.0 * span
+            DispatchQueue.main.async {
+                if n != nil { self?.percent = overall }
+                if let fc { self?.files = fc }
+                if !file.isEmpty { self?.current = file }
             }
         }
         err.fileHandleForReading.readabilityHandler = { h in
@@ -224,15 +272,29 @@ final class Runner: ObservableObject {
             err.fileHandleForReading.readabilityHandler = nil
             let rest = String(decoding: (try? out.fileHandleForReading.readToEnd()) ?? Data(), as: UTF8.self)
                 + String(decoding: (try? err.fileHandleForReading.readToEnd()) ?? Data(), as: UTF8.self)
-            lock.lock(); all += rest; let text = all; lock.unlock()
+            lock.lock(); all += rest; var text = all; var code = pr.terminationStatus; lock.unlock()
+            if call.executable == UNRAR { (code, text) = annotateUnrarResult(code, text) }
+            if code == 0, let dest = call.elimRoot { eliminateSingleRoot(dest, previous: snap) }
             DispatchQueue.main.async {
                 guard let self else { return }
-                self.running = false; self.proc = nil; self.paused = false
-                self.window?.orderOut(nil)
-                done(self.cancelled ? -2 : pr.terminationStatus, text)
+                self.combined += text
+                if !self.combined.hasSuffix("\n") { self.combined += "\n" }
+                if self.cancelled { self.finish(-2, done: done); return }
+                if code != 0 { self.finish(code, done: done); return }
+                if index + 1 < self.queue.count { self.startCall(index + 1, cwd: cwd, done: done); return }
+                self.finish(0, done: done)
             }
         }
-        do { try p.run(); proc = p; showWindow() } catch { running = false; done(-1, "\(error)") }
+        do { try p.run(); proc = p } catch {
+            combined += "\(error)\n"
+            finish(-1, done: done)
+        }
+    }
+
+    private func finish(_ code: Int32, done: (Int32, String) -> Void) {
+        running = false; proc = nil; paused = false
+        window?.orderOut(nil)
+        done(code, combined)
     }
     func showWindow() {
         if window == nil {

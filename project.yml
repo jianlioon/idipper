@@ -21,6 +21,10 @@ targets:
         buildPhase:
           copyFiles:
             destination: executables
+      - path: Vendor/unrar
+        buildPhase:
+          copyFiles:
+            destination: executables
     settings:
       base:
         PRODUCT_NAME: iDipper
@@ -50,11 +54,18 @@ targets:
           cd "$SRCROOT" && /usr/bin/python3 -c "exec(open('l10n/gen.py').read())"
         basedOnDependencyAnalysis: false
     postBuildScripts:
-      - name: Sign bundled 7zz (sandbox inherit)
+      - name: Sign bundled helpers (sandbox inherit)
         script: |
-          if [ -n "$DWARF_DSYM_FOLDER_PATH" ]; then /usr/bin/xcrun dsymutil "$TARGET_BUILD_DIR/$EXECUTABLE_FOLDER_PATH/7zz" -o "$DWARF_DSYM_FOLDER_PATH/7zz.dSYM" 2>/dev/null || true; fi
           ID="${EXPANDED_CODE_SIGN_IDENTITY:--}"
-          /usr/bin/codesign --force --sign "$ID" -o runtime --timestamp --entitlements "$SRCROOT/tools/7zz.entitlements" "$TARGET_BUILD_DIR/$EXECUTABLE_FOLDER_PATH/7zz"
+          sign_helper() {
+            name="$1"
+            bin="$TARGET_BUILD_DIR/$EXECUTABLE_FOLDER_PATH/$name"
+            if [ ! -f "$bin" ]; then return 0; fi
+            if [ -n "$DWARF_DSYM_FOLDER_PATH" ]; then /usr/bin/xcrun dsymutil "$bin" -o "$DWARF_DSYM_FOLDER_PATH/$name.dSYM" 2>/dev/null || true; fi
+            /usr/bin/codesign --force --sign "$ID" -o runtime --timestamp --entitlements "$SRCROOT/tools/7zz.entitlements" "$bin"
+          }
+          sign_helper 7zz
+          sign_helper unrar
         basedOnDependencyAnalysis: false
 schemes:
   iDipper:

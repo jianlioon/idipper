@@ -79,7 +79,7 @@ enum Access {
         return true
     }
 
-    /// Check every absolute path in a 7zz argument list (archive, -o output, source files).
+    /// Check every absolute path in a 7zz-style argument list (archive, -o output, source files).
     static func ensure(args: [String], cwd: URL?) {
         guard sandboxed else { return }
         if let c = cwd { ensure(c, write: true) }
