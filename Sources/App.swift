@@ -224,5 +224,5 @@ func showAbout() {
         .split(separator: "\n").map { $0.trimmingCharacters(in: .whitespaces) }.first { !$0.isEmpty } ?? "UnRAR"
     let credits = NSAttributedString(string: L("macOS 压缩/解压文件管理器") + "\n\n" + L("压缩引擎：") + "7-Zip (7zz) by Igor Pavlov, GNU LGPL\n" + engine + "\n\n7-Zip license: iDipper.app/Contents/Resources/7zip-License.txt\nSource: https://www.7-zip.org\n\nRAR：UnRAR by Alexander Roshal, freeware\n" + unrarLine + "\nUnRAR license: iDipper.app/Contents/Resources/unrar-License.txt\nhttps://www.rarlab.com/", attributes: [.font: NSFont.systemFont(ofSize: 11)])
     NSApp.activate(ignoringOtherApps: true)
-    NSApp.orderFrontStandardAboutPanel(options: [.applicationName: L("iDipper"), .credits: credits, .applicationVersion: (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.1.0"), .version: (Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1")])
+    NSApp.orderFrontStandardAboutPanel(options: [.applicationName: L("iDipper"), .credits: credits, .applicationVersion: (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.2.0"), .version: (Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1")])
 }
