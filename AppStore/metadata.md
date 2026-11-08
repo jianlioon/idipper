@@ -1,5 +1,11 @@
 # iDipper App Store 文案
 
+## What's New — 1.2.0
+RAR archives, including newer RAR5 methods that 7-Zip cannot decode, now extract and test with the bundled UnRAR utility. Other formats still use 7-Zip.
+
+本次更新：较新的 RAR5 压缩方法改为随应用分发的 UnRAR 解压和测试。其他格式仍使用 7-Zip。
+
+
 ## English (U.S.)
 Name: iDipper
 Subtitle: 7-Zip Archiver & Extractor

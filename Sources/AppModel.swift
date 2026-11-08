@@ -119,12 +119,22 @@ final class AppModel: ObservableObject {
             extractReq = ExtractRequest(archives: arcs, items: [], dest: destOverride ?? defaultDest(arcs[0], multi: arcs.count > 1), password: "")
         }
     }
+    /// Last folder chosen in the extract dialog; otherwise the archive's own directory.
     func defaultDest(_ a: URL, multi: Bool) -> String {
-        let parent = a.deletingLastPathComponent()
-        if multi { return parent.appendingPathComponent("*").path }
-        let d = parent.appendingPathComponent(archiveBaseName(a)).path
-        if FileManager.default.fileExists(atPath: d) && !isDirPath(d) { return parent.path }
-        return d
+        let parent = a.deletingLastPathComponent().path
+        if var last = UserDefaults.standard.string(forKey: "lastExtractDest"), !last.isEmpty {
+            if !multi {
+                if last.hasSuffix("/*") { last.removeLast(2) }
+                else if last.hasSuffix("*") { last.removeLast() }
+            }
+            if !last.isEmpty { return last }
+        }
+        return parent
+    }
+    func rememberExtractDest(_ dest: String) {
+        let d = dest.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !d.isEmpty else { return }
+        UserDefaults.standard.set(d, forKey: "lastExtractDest")
     }
     func test() {
         let p = cur
@@ -143,6 +153,7 @@ final class AppModel: ObservableObject {
 
     /// add files into archive (optionally inside folder `inner`), staging to temp if needed
     func addToArchive(_ arc: URL, files: [URL], inner: String, password: String?, deleteSource: Bool = false, done: (() -> Void)? = nil) {
+        if isRarArchivePath(arc.path) { msgBox(L("添加"), rarReadOnlyMessage()); return }
         var cwd = files[0].deletingLastPathComponent()
         var names = files.map { $0.lastPathComponent }
         let sameParent = files.allSatisfy { $0.deletingLastPathComponent() == cwd }
@@ -247,6 +258,7 @@ final class AppModel: ObservableObject {
         let p = cur; let sel = p.selected
         guard !sel.isEmpty else { return }
         if let arc = p.archive {
+            if isRarArchivePath(arc.path) { msgBox(L("删除失败"), rarReadOnlyMessage()); return }
             guard confirm(L("确认删除"), LF("从压缩包中删除 %@ 个项目？此操作不可撤销。", "\(sel.count)"), ok: L("删除")) else { return }
             runner.run(title: L("正在删除"), args: ["d", arc.path, "-p" + (p.password ?? ""), "--"] + sel.map { $0.path }) { code, out in
                 if code != 0 && code != -2 { msgBox(L("删除失败"), String(out.suffix(1500))) }
@@ -263,6 +275,7 @@ final class AppModel: ObservableObject {
         guard let e = p.selected.first else { return }
         guard let n = ask(L("重命名"), L("新名称："), e.name), !n.isEmpty, n != e.name, !n.contains("/") else { return }
         if let arc = p.archive {
+            if isRarArchivePath(arc.path) { msgBox(L("重命名失败"), rarReadOnlyMessage()); return }
             let prefix = p.inner.isEmpty ? "" : p.inner + "/"
             let newPath = prefix + n
             var pairs = [e.path, newPath]

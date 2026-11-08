@@ -259,6 +259,7 @@ struct ExtractView: View {
     }
 
     func start() {
+        app.rememberExtractDest(dest)
         let sel = req.items
         var md = mode
         var excludes: [String] = []
